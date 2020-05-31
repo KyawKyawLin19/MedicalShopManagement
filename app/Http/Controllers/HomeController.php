@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,28 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $userRoles = Auth::user()->roles()->pluck('name');
+        if($userRoles->contains('admin')){
+            return redirect('admin');
+        }
+        return view('user');
+    }
+
+    public function user()
+    {
+        return view('user');
+    }
+
+    public function admin()
+    {
+        $userRoles = Auth::user()->roles()->pluck('name');
+        if(!$userRoles->contains('admin')){
+            return redirect('permissiondenied');
+        }
+        return view('admin');
+    }
+
+    public function permission_denied(){
+        return view('permission_denied');
     }
 }
