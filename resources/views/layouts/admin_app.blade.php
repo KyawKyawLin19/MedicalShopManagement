@@ -65,12 +65,12 @@
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-user"></i>
-                                <span>Patients</span>
+                                <span>Users</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
                                 <li><a href="{{url('patient/create')}}"><i class="fa fa-angle-double-right"></i> Add New Patient</a></li>
-                                <li><a href="{{url('patient')}}"><i class="fa fa-angle-double-right"></i> Patients List</a></li>
+                                <li><a href="{{url('users')}}"><i class="fa fa-angle-double-right"></i> Users List</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -102,37 +102,6 @@
                             <ul class="treeview-menu">
                                 <li><a href="{{url('township/create')}}"><i class="fa fa-angle-double-right"></i> Add New Township</a></li>
                                 <li><a href="{{url('township')}}"><i class="fa fa-angle-double-right"></i> Townships List</a></li>
-                            </ul>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-hospital-o"></i> <span>Cities</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="{{url('city/create')}}"><i class="fa fa-angle-double-right"></i> Add New City</a></li>
-                                <li><a href="{{url('city')}}"><i class="fa fa-angle-double-right"></i> Cities List</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="pages/mailbox.html">
-                                <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                                <small class="badge pull-right bg-yellow">12</small>
-                            </a>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-folder"></i> <span>Examples</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="pages/examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="pages/examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="pages/examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="pages/examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="pages/examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                                <li><a href="pages/examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
                         </li>
                     </ul>

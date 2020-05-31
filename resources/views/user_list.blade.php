@@ -17,15 +17,16 @@
 
             <!-- Small boxes (Stat box) -->
             <div class="row">
-            @foreach($shops as $shop)
+            @foreach($users as $user)
                 <div class="col-lg-3 col-xs-6">
                     <!-- small box -->
                     <div class="small-box bg-aqua">
                         <div class="inner">
                             <h3>
-                               {{$shop->name}}
+                               {{$user->name}}
                             </h3>
                             <p>
+                                {{$user->email}}
                             </p>
                         </div>
                         <div class="icon">

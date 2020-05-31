@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-
+use App\Shop;
+use App\User;
 class HomeController extends Controller
 {
     /**
@@ -26,9 +27,12 @@ class HomeController extends Controller
     {
         $userRoles = Auth::user()->roles()->pluck('name');
         if($userRoles->contains('admin')){
-            return redirect('admin');
+            $shops = Shop::all();
+            return view('admin',compact('shops'));
         }
-        return view('user');
+        $userShops = Auth::user()->shops()->pluck('name');
+        $shops = Shop::where('name',$userShops[0])->first(); 
+        return view('user',compact('shops'));
     }
 
     public function user()
@@ -42,10 +46,16 @@ class HomeController extends Controller
         if(!$userRoles->contains('admin')){
             return redirect('permissiondenied');
         }
-        return view('admin');
+        $shops = Shop::all();
+        return redirect('admin',compact('shops'));
     }
 
     public function permission_denied(){
         return view('permission_denied');
+    }
+
+    public function userList(){
+        $users = User::all();
+        return view('user_list',compact('users'));
     }
 }
