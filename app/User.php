@@ -41,7 +41,7 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Role');
     }
 
-    public function shops(){
-        return $this->belongsToMany('App\Shop');
+    public function shop(){
+        return $this->hasOne('App\Shop');
     }
 }

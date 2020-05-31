@@ -21,11 +21,10 @@ Auth::routes();
 
 
 Route::group(['middleware'=>['auth']], function(){
-    Route::get('/user','HomeController@user');
-    Route::get('/users','HomeController@userList');
     Route::get('/permissiondenied','HomeController@permission_denied');
     // Route::group(['middleware'=>['admin']], function(){
-        Route::get('/admin','HomeController@admin');
+        Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/users','HomeController@userList');
     // });
 });
-Route::get('/home', 'HomeController@index')->name('home');
+

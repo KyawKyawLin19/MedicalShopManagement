@@ -75,12 +75,12 @@
                         </li>
                         <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-users"></i>
-                                <span>Volunteers</span>
+                                <i class="fa fa-medkit"></i>
+                                <span>Medicines</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="{{url('volunteer/create')}}"><i class="fa fa-angle-double-right"></i> Add New Volunteer</a></li>
+                                <li><a href="{{url('volunteer/create')}}"><i class="fa fa-angle-double-right"></i> Add New Medicine</a></li>
                                 <li><a href="{{url('volunteer')}}"><i class="fa fa-angle-double-right"></i> Volunteers List</a></li>
                             </ul>
                         </li>

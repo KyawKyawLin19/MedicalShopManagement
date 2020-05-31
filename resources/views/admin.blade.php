@@ -26,6 +26,7 @@
                                {{$shop->name}}
                             </h3>
                             <p>
+                                {{$shop->user->name}}
                             </p>
                         </div>
                         <div class="icon">

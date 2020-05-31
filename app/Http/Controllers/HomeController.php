@@ -30,25 +30,25 @@ class HomeController extends Controller
             $shops = Shop::all();
             return view('admin',compact('shops'));
         }
-        $userShops = Auth::user()->shops()->pluck('name');
+        $userShops = Auth::user()->shop()->pluck('name');
         $shops = Shop::where('name',$userShops[0])->first(); 
         return view('user',compact('shops'));
     }
 
-    public function user()
-    {
-        return view('user');
-    }
+    // public function user()
+    // {
+    //     return view('user');
+    // }
 
-    public function admin()
-    {
-        $userRoles = Auth::user()->roles()->pluck('name');
-        if(!$userRoles->contains('admin')){
-            return redirect('permissiondenied');
-        }
-        $shops = Shop::all();
-        return redirect('admin',compact('shops'));
-    }
+    // public function admin()
+    // {
+    //     $userRoles = Auth::user()->roles()->pluck('name');
+    //     if(!$userRoles->contains('admin')){
+    //         return redirect('permissiondenied');
+    //     }
+    //     $shops = Shop::all();
+    //     return redirect('admin',compact('shops'));
+    // }
 
     public function permission_denied(){
         return view('permission_denied');
